@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Passions+Conflict&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* height: 100vh; */
+  /* width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; */
+
+  /* background: #e1b378; */
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main {
+  width: 100%;
+  height: 100vh;
+
+  background: #000;
+}
+
+.main .slide-show {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-show .slide.active {
+  opacity: 1;
+  transition: 2s;
+}
+
+.slide-show .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  background: #000;
+}
+
+.slide-show .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide-show .slide .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.slide-show .slide .content .name {
+  font-family: "Great Vibes";
+  font-size: 7em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.slide-show .slide .content h1 {
+  font-family: "Great Vibes";
+  font-size: 5em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.slide-show .slide .content h2 {
+  font-family: "Great Vibes";
+  font-size: 3em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.slide-show .slide .content h3 {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+/* ------- schedule styles ------- */
+.schedule {
+  padding: 50px 20px 50px 20px;
+  flex-direction: column;
+  /* background: rebeccapurple; */
+}
+
+.schedule .title-area {
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  /* background: yellow; */
+}
+
+.schedule .title-area h1 {
+  font-family: "Great Vibes";
+  font-size: 4em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.schedule .title-area h2 {
+  font-family: "Abyssinica SIL";
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.schedule .content-area {
+  position: relative;
+  display: flex;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  flex-direction: row;
+  /* padding: 20px; */
+
+  /* background: maroon; */
+}
+
+.schedule .content-area .content {
+  width: 30%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+  border-radius: 30px;
+  box-shadow: 0 0 30px rgb(0 0 0 / 30%);
+  padding: 30px;
+  /* margin: 20px; */
+
+  /* background: #e1b378; */
+}
+
+.schedule .content-area .content .top {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  /* padding: 0 0 30px 0; */
+
+  /* background: red; */
+}
+.schedule .content-area .content .bottom {
+  width: 100%;
+  position: relative;
+  display: flex;
+
+  /* background: blue; */
+}
+
+.schedule .content-area .content .top .title {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+.schedule .content-area .content .top p {
+  font-family: "Abyssinica SIL";
+  font-size: 1.1em;
+  font-weight: 500;
+  margin: 10px 0 10px 0;
+}
+
+@media (max-width: 770px) {
+  /* ------- main styles ------- */
+  .slide-show .slide .content .name {
+    font-size: 5em;
+  }
+
+  .slide-show .slide .content h1 {
+    font-size: 3em;
+  }
+
+  .slide-show .slide .content h2 {
+    font-size: 1.5em;
+  }
+
+  .slide-show .slide .content h3 {
+    font-size: 1em;
+  }
+
+  /* ------- schedule syles ------- */
+
+  .schedule .title-area h1 {
+    font-size: 3em;
+  }
+
+  .schedule .title-area h2 {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .schedule .content-area {
+    flex-direction: column;
+  }
+
+  .schedule .content-area .content {
+    width: 100%;
+    margin: 10px 0 40px 0;
+  }
+
+  .schedule .content-area .content .top .title {
+    font-size: 1em;
+  }
+
+  .schedule .content-area .content .top p {
+    font-size: 0.9em;
+    margin: 5px 0 5px 0;
+  }
+}
