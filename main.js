@@ -1,3 +1,20 @@
+// //Javascript for reveal transition
+// //common reveal options to create reveal animations
+// ScrollReveal({
+//   reset: false,
+//   distance: "60px",
+//   duration: 2500,
+//   delay: 400,
+// });
+
+// //target elements, and specify options to create reveal animations
+// ScrollReveal().reveal("", { delay: 700, origin: "bottom", interval: 200 });
+// ScrollReveal().reveal("", { delay: 600, origin: "left", interval: 200 });
+// ScrollReveal().reveal(".shots", { delay: 600, origin: "right", interval: 200 });
+// ScrollReveal().reveal(".locateEureka", { delay: 700, origin: "bottom" });
+// ScrollReveal().reveal("", { delay: 500, origin: "bottom", interval: 200 });
+// ScrollReveal().reveal(".gallery", { delay: 500, origin: "top", interval: 200 });
+
 //Change image by window width
 let w = window.innerWidth;
 
