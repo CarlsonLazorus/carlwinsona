@@ -412,14 +412,14 @@ section {
   }
 
   /* ------- wedding card styles ------- */
-  /* .wedding-card {
+  .wedding-card {
     width: 100%;
     height: auto;
     flex-direction: column;
-    padding: 20px 0 20px 0;
+    padding: 30px 0 30px 0;
 
-    background: blue;
-  } */
+    /* background: blue; */
+  }
 
   .wedding-card .top-text {
     font-size: 1em;
