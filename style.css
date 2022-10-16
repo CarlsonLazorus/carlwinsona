@@ -30,21 +30,93 @@ section {
   width: 100%;
   height: 100vh;
 
-  background: #000;
+  /* background: rgba(255, 255, 255, 0.1); */
+  background: #fff;
 }
 
-.main .slide-show {
+.main .content {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 999;
+
+  background: rgba(0, 0, 0, 0.5);
+}
+
+.main .content .intro {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+
+.main .content .name {
+  font-family: "Great Vibes";
+  font-size: 10em;
+  font-weight: 500;
+  text-align: center;
+  margin: 20px 0 20px 0;
+  color: #fff;
+}
+
+.main .content .save {
+  font-family: "Great Vibes";
+  font-size: 5em;
+  font-weight: 500;
+  text-align: center;
+  color: #fff;
+}
+.main .content .location {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+.main .content .date {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+.main .content .day {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+.main .content .countdown {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  color: #fff;
+}
+
+.main .slide-show1 {
   position: relative;
   width: 100%;
   height: 100vh;
 }
 
-.slide-show .slide.active {
+.slide-show1 .slide.active {
   opacity: 1;
   transition: 2s;
 }
 
-.slide-show .slide {
+.slide-show1 .slide {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -56,60 +128,120 @@ section {
   background: #000;
 }
 
-.slide-show .slide img {
+.slide-show1 .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.slide-show .slide .content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* ------- wedding card styles ------- */
+.wedding-card {
+  width: 100%;
+  height: 100vh;
   flex-direction: column;
 
-  background: rgba(0, 0, 0, 0.3);
+  /* background: blue; */
 }
 
-.slide-show .slide .content .name {
-  font-family: "Great Vibes";
-  font-size: 7em;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.slide-show .slide .content h1 {
-  font-family: "Great Vibes";
-  font-size: 5em;
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.slide-show .slide .content h2 {
-  font-family: "Great Vibes";
-  font-size: 3em;
-  font-weight: 400;
-  text-align: center;
-  margin-bottom: 20px;
-  color: #fff;
-}
-
-.slide-show .slide .content h3 {
+.wedding-card .top-text {
   font-family: "Abyssinica SIL";
   font-size: 2em;
   font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
-  color: #fff;
+  color: #000;
+}
+
+.wedding-card .name-column {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  flex-direction: row;
+  margin: 30px 0 70px 0;
+
+  /* background: red; */
+}
+
+.wedding-card .name-column .left {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* background: yellow; */
+}
+
+.wedding-card .name-column .middle {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* background: green; */
+}
+
+.wedding-card .name-column .right {
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* background: orange; */
+}
+
+.name-text {
+  font-family: "Great Vibes";
+  font-size: 4.7em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 50px;
+  color: #000;
+}
+
+.born-text {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #000;
+}
+
+.parent-text {
+  font-family: "Great Vibes";
+  font-size: 3em;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+
+.plus-text {
+  font-family: "Great Vibes";
+  font-size: 3em;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
+}
+
+.wedding-card .bottom-text {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hashtag {
+  font-family: "Great Vibes";
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: #000;
 }
 
 /* ------- schedule styles ------- */
@@ -202,21 +334,133 @@ section {
   margin: 10px 0 10px 0;
 }
 
+/* ------- rsvp styles ------- */
+.rsvp {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+
+  /* background: blue; */
+}
+
+/* ------- prewedding video styles ------- */
+.video-section {
+  width: 100%;
+  height: 100vh;
+  flex-direction: column;
+
+  /* background: blue; */
+}
+
 @media (max-width: 770px) {
   /* ------- main styles ------- */
-  .slide-show .slide .content .name {
-    font-size: 5em;
-  }
-
-  .slide-show .slide .content h1 {
-    font-size: 3em;
-  }
-
-  .slide-show .slide .content h2 {
+  .main .content .intro {
     font-size: 1.5em;
   }
 
-  .slide-show .slide .content h3 {
+  .main .content .name {
+    font-size: 4.7em;
+    margin: 50px 0 50px 0;
+  }
+
+  .main .content .save {
+    font-size: 3em;
+  }
+  .main .content .location {
+    font-size: 1.3em;
+  }
+
+  .main .content .date {
+    font-size: 1.3em;
+  }
+
+  .main .content .day {
+    font-size: 1.3em;
+  }
+
+  .main .content .countdown {
+    font-size: 1.3em;
+  }
+
+  .main .slide-show2 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+  }
+
+  .slide-show2 .slide2.active {
+    opacity: 1;
+    transition: 2s;
+  }
+
+  .slide-show2 .slide2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    opacity: 0;
+    background: #000;
+  }
+
+  .slide-show2 .slide2 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* ------- wedding card styles ------- */
+  /* .wedding-card {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px 0 20px 0;
+
+    background: blue;
+  } */
+
+  .wedding-card .top-text {
+    font-size: 1em;
+    margin-bottom: 20px;
+  }
+
+  .wedding-card .name-column {
+    margin: 30px 0 80px 0;
+
+    /* background: red; */
+  }
+
+  .name-text {
+    font-family: "Great Vibes";
+    font-size: 1.2em;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 50px;
+    color: #000;
+  }
+
+  .born-text {
+    font-size: 0.6em;
+    margin-bottom: 10px;
+  }
+
+  .parent-text {
+    font-size: 0.7em;
+  }
+
+  .plus-text {
+    font-size: 0.7em;
+  }
+
+  .wedding-card .bottom-text {
+    font-size: 0.8em;
+    margin-bottom: 20px;
+    padding: 0 10px 0 10px;
+  }
+
+  .hashtag {
     font-size: 1em;
   }
 

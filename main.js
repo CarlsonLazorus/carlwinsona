@@ -1,3 +1,14 @@
+//Change image by window width
+let w = window.innerWidth;
+
+if (w < 1100) {
+  document.getElementById("desktop").style.display = "none";
+  document.getElementById("phone").style.display = "inline";
+} else if ((w) => 1100) {
+  document.getElementById("phone").style.display = "none";
+  document.getElementById("desktop").style.display = "inline";
+}
+
 //Countdown text
 // Set the date we're counting down to
 var countDownDate = new Date("Dec 31, 2022 00:00:00").getTime();
@@ -20,12 +31,6 @@ var x = setInterval(function () {
   document.getElementById("countdown1").innerHTML =
     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
 
-  document.getElementById("countdown2").innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
-  document.getElementById("countdown3").innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
@@ -33,8 +38,8 @@ var x = setInterval(function () {
   }
 }, 1000);
 
-//Javascript for slide show
-const slider = document.querySelector(".slide-show");
+//Javascript for slide show desktop
+const slider = document.querySelector(".slide-show1");
 const slides = document.querySelectorAll(".slide");
 const numOfSlides = slides.length;
 var slideNumber = 0;
@@ -55,7 +60,34 @@ var autoplay = () => {
     }
 
     slides[slideNumber].classList.add("active");
-  }, 3000);
+  }, 5000);
+};
+
+autoplay();
+
+//Javascript for slide show desktop
+const slider2 = document.querySelector(".slide-show2");
+const slides2 = document.querySelectorAll(".slide2");
+const numOfSlides2 = slides2.length;
+var slideNumber2 = 0;
+
+//image slide show autoplay
+var playSlider;
+
+var autoplay = () => {
+  playSlider = setInterval(function () {
+    slides2.forEach((slide2) => {
+      slide2.classList.remove("active");
+    });
+
+    slideNumber2++;
+
+    if (slideNumber2 > numOfSlides2 - 1) {
+      slideNumber2 = 0;
+    }
+
+    slides2[slideNumber2].classList.add("active");
+  }, 5000);
 };
 
 autoplay();
