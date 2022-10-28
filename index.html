@@ -13,16 +13,18 @@
 
     <section class="main">
         <div class="content">
+            <!-- <img src="images/gold/circle.png" alt=""> -->
             <h1 class="intro">THE WEDDING OF</h1>
             <h1 class="name">Carlwinsona</h1>
             <h1 class="save">Save the date!</h1>
-            <p class="date">December 31, 2022</p>
+            <p class="date">31.12.22</p>
+            <!-- <p class="date">December 31, 2022</p> -->
             <p class="day">(SATURDAY)</p>
             <p class="location">Tambunan, Sabah, Malaysia</p>
             <p class="countdown" id="countdown1"></p>
         </div>
 
-        <div class="slide-show1" id="desktop">
+        <!-- <div class="slide-show1" id="desktop">
             <div class="slide active">
                 <img src="images/h1.JPG" alt="">
             </div>
@@ -41,10 +43,10 @@
             <div class="slide">
                 <img src="images/h6.JPG" alt="">
             </div>
-        </div>
+        </div> -->
 
         <!-- phone slides -->
-        <div class="slide-show2" id="phone">
+        <!-- <div class="slide-show2" id="phone">
             <div class="slide2 active">
                 <img src="images/v1.JPG" alt="">
             </div>
@@ -87,7 +89,7 @@
             <div class="slide2">
                 <img src="images/v14.JPG" alt="">
             </div>
-        </div>
+        </div> -->
 
     </section>
 
@@ -95,27 +97,28 @@
         <h1 class="top-text">TOGETHER WITH OUR FAMILIES</h1>
         <div class="name-column">
             <div class="left">
+                <img class="photo" src="images/v3.JPG" alt="">
                 <h1 class="name-text">Carlson Lazorus</h1>
                 <!-- <h1 class="name-text">Lazorus</h1> -->
-                <p class="born-text">7th son of</p>
+                <p class="born-text">7th son of:</p>
                 <h2 class="parent-text">Mr. Lazorus Sabuting</h2>
-                <h2 class="plus-text">+</h2>
+                <h2 class="plus-text">and</h2>
                 <h2 class="parent-text">Mdm. Nuriah Nain</h2>
             </div>
             <div class="middle">
                 <h1 class="name-text">&</h1>
             </div>
             <div class="right">
+                <img class="photo" src="images/v2.JPG" alt="">
                 <h1 class="name-text">Winna P. Kayau</h1>
                 <!-- <h1 class="name-text">Primus Kayau</h1> -->
-                <p class="born-text">Eldest daughter of</p>
+                <p class="born-text">Eldest daughter of:</p>
                 <h2 class="parent-text">The late Mr. Hilde P. Kayau</h2>
-                <h2 class="plus-text">+</h2>
+                <h2 class="plus-text">and</h2>
                 <h2 class="parent-text">Mdm. Shirlyna Yong</h2>
             </div>
         </div>
         <h2 class="bottom-text">We request the pleasure of your company at the celebration of our wedding.</h2>
-        <h2 class="hashtag">#carlwinsona'shappilyeverafter</h2>
     </section>
 
     <section class="schedule">
@@ -182,24 +185,156 @@
                 </div>
             </div>
         </div>
-        <p class="hashtag">#carlwinsona'shappilyeverafter</p>
     </section>
+
+
 
     <section class="rsvp">
-        <h1>PLEASE RSVP LATEST BY 01/12/2022</h1>
+        <div class="content">
+            <h1 class="title">Reservation</h1>
+            <p class="text1">PLEASE RSVP LATEST BY 01/12/2022</p>
 
-        <h2>Kindly fil up your details to confirm your attendance</h2>
-        <p>1) Name:</p>
-        <p>2) Contact No:</p>
-        <p>3) Additional guest?</p>
-        <p>4) If yes, enter guest name:</p>
+            <p class="text2">Kindly fill up your details to confirm your attendance</p>
+
+            <form class="rsvpForm" action="">
+                <label class="formText">Name: </label>
+                <br>
+                <input class="inputCombine" type="text" placeholder="eg: Carlwinsona" required>
+                <br><br>
+
+                <label class="formText">Contact No: </label>
+                <br>
+                <input class="inputCombine" type="tel" id="phoneNo" name="phone" placeholder="eg:012-3456789" required>
+                <br><br>
+
+                <label class="formText"> Will you attend: </label>
+                <br>
+                <input type="radio" name="attend" value="Yes" required> <label class="radioText" for="">Yes</label>
+                &emsp;
+                <input type="radio" name="attend" value="No" required> <label class="radioText" for="">No</label>
+                <br><br>
+
+                <label class="formText">Additional guest?/Total attendance: </label>
+                <br>
+                <input type="radio" name="gender" value="1" required> <label class="radioText" for="">1</label> &emsp;
+                <input type="radio" name="gender" value="2" required> <label class="radioText" for="">2</label> &emsp;
+                <input type="radio" name="gender" value="3" required> <label class="radioText" for="">3</label> &emsp;
+                <input type="radio" name="gender" value="4" required> <label class="radioText" for="">4</label> &emsp;
+                <input type="radio" name="gender" value="5" required> <label class="radioText" for="">5</label>
+                <br><br>
+
+                <label class="formText"> Wishes: </label>
+                <br>
+                <input class="inputCombine" type="text" id="wish" name="phone" placeholder="Happy Wedding Day" required>
+                <br><br>
+
+                <input class="inputCombine" type="submit" value="Send" name="submit">
+            </form>
+        </div>
+
+        <div class="content">
+            <h1 class="title">Wishes</h1>
+        </div>
     </section>
+
+    <section class="gift">
+        <h1>Wedding Gift</h1>
+        <p>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following
+            buttons to send them to us:</p>
+        <button onclick="showDiv()">Wedding Gift</button>
+        <!-- style="display:none;" -->
+        <div class="cardContainer" id="welcomeDiv" style="display:none;">
+            <div class="card">
+                <p class="bankName">Maybank</p>
+                <p class="bankNo" id="bankNum">165125317811</p>
+                <p class="name">Winna Primus Kayau</p>
+                <div class="copyButton" onclick="copyBank()">Copy Number</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- <section class="gallery"> -->
+    <!-- <h1>Gallery</h1>
+
+        <div class="slide-show1" id="desktop">
+            <div class="slide active">
+                <img src="images/h1.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/h2.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/h3.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/h4.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/h5.JPG" alt="">
+            </div>
+            <div class="slide">
+                <img src="images/h6.JPG" alt="">
+            </div>
+        </div> -->
+
+    <!-- phone slides -->
+    <!-- <div class="slide-show2" id="phone">
+            <div class="slide2 active">
+                <img src="images/v1.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v2.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v3.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v4.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v5.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v6.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v7.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v8.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v9.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v10.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v11.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v12.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v13.JPG" alt="">
+            </div>
+            <div class="slide2">
+                <img src="images/v14.JPG" alt="">
+            </div>
+        </div> -->
+    <!-- </section> -->
 
     <section class="video-section">
         <h1>Hope to see you on our big day!</h1>
-        <p>#carlwinsona'shappilyeverafter</p>
-        <h2>In the mean time, please enjoy our short prewedding clip</h2>
+        <h2>In the mean time, please enjoy our short prewedding clip.</h2>
         <!-- video tag -->
+        <iframe src="https://www.youtube.com/embed/E50Kb67zpK8" title="Video Montage #4: Kota Belud, Sabah"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+
+        <p class="hashtag">#carlwinsona'shappilyeverafter</p>
+
     </section>
 
 </body>

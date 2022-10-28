@@ -16,15 +16,15 @@
 // ScrollReveal().reveal(".gallery", { delay: 500, origin: "top", interval: 200 });
 
 //Change image by window width
-let w = window.innerWidth;
+// let w = window.innerWidth;
 
-if (w < 1100) {
-  document.getElementById("desktop").style.display = "none";
-  document.getElementById("phone").style.display = "inline";
-} else if ((w) => 1100) {
-  document.getElementById("phone").style.display = "none";
-  document.getElementById("desktop").style.display = "inline";
-}
+// if (w < 1100) {
+//   document.getElementById("desktop").style.display = "none";
+//   document.getElementById("phone").style.display = "inline";
+// } else if ((w) => 1100) {
+//   document.getElementById("phone").style.display = "none";
+//   document.getElementById("desktop").style.display = "inline";
+// }
 
 //Countdown text
 // Set the date we're counting down to
@@ -54,6 +54,17 @@ var x = setInterval(function () {
     document.getElementById("countdown").innerHTML = "EXPIRED";
   }
 }, 1000);
+
+//show bank number
+function showDiv() {
+  document.getElementById("welcomeDiv").style.display = "block";
+}
+
+//copy bank number
+function copyBank() {
+  /* Copy text into clipboard */
+  navigator.clipboard.writeText("165125317811");
+}
 
 //Javascript for slide show desktop
 const slider = document.querySelector(".slide-show1");

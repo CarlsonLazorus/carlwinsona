@@ -36,11 +36,14 @@ section {
 
 .main {
   width: 100%;
-  height: 100%;
+  height: 100vh;
 
+  background: url(images/h3.JPG) no-repeat;
+  background-size: cover;
+  background-position: center;
   /* background: rgba(255, 255, 255, 0.1); */
-  background: #fff;
-  box-shadow: 0 0 30px rgb(0 0 0 / 100%);
+  /* background: #000; */
+  /* box-shadow: 0 0 30px rgb(0 0 0 / 100%); */
 }
 
 .main .content {
@@ -56,66 +59,81 @@ section {
   z-index: 999;
   height: 100vh;
 
+  /* background: url(images/h3.JPG) no-repeat;
+  background-size: cover;
+  background-position: center; */
+  /* background-attachment: fixed; */
+
   background: rgba(0, 0, 0, 0.5);
 }
 
 .main .content .intro {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 500;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 
 .main .content .name {
   font-family: "Great Vibes";
-  font-size: 10em;
+  font-size: 6em;
   font-weight: 500;
   text-align: center;
   margin: 20px 0 20px 0;
-  color: #fff;
+  color: #eca241;
+  /* color: #e8ab16; */
+  /* color: #e1a730; */
+
+  /* color: #b07d26; */
+
+  /* color: #e1a140; */
+  /* color: #d6ad60; */
+  /* color: #b68d40; */
+  /* color: #eca241; */
+  /* color: #d49d40; */
 }
 
 .main .content .save {
-  font-family: "Great Vibes";
-  font-size: 5em;
+  font-family: "Abyssinica SIL";
+  font-size: 1.5em;
   font-weight: 500;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 .main .content .location {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 
 .main .content .date {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 
 .main .content .day {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 
 .main .content .countdown {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: 400;
   text-align: center;
-  color: #fff;
+  color: #d6ad60;
 }
 
-.main .slide-show1 {
+/* .main .slide-show1 {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -142,24 +160,25 @@ section {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+} */
 
 /* ------- wedding card styles ------- */
 .wedding-card {
   width: 100%;
-  height: 100vh;
+  height: auto;
   flex-direction: column;
+  padding: 50px 0 0 0;
 
-  /* background: blue; */
+  background: #000;
 }
 
 .wedding-card .top-text {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
-  font-weight: 400;
+  font-size: 1.7em;
+  font-weight: 500;
   text-align: center;
   margin-bottom: 20px;
-  color: #000;
+  color: #d6ad60;
 }
 
 .wedding-card .name-column {
@@ -168,7 +187,7 @@ section {
   width: 100%;
   justify-content: space-evenly;
   flex-direction: row;
-  margin: 30px 0 70px 0;
+  padding: 30px 0 30px 0;
 
   /* background: red; */
 }
@@ -186,7 +205,7 @@ section {
 .wedding-card .name-column .middle {
   width: 5%;
   display: flex;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   flex-direction: column;
 
@@ -203,61 +222,63 @@ section {
   /* background: orange; */
 }
 
+.photo {
+  width: auto;
+  height: 300px;
+  border-radius: 30px;
+}
+
 .name-text {
   font-family: "Great Vibes";
-  font-size: 4.7em;
+  font-size: 4em;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 50px;
-  color: #000;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  color: #eca241;
 }
 
 .born-text {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
-  font-weight: 500;
+  font-size: 1.5em;
+  font-weight: 400;
+  font-style: italic;
   text-align: center;
   margin-bottom: 10px;
-  color: #000;
+  color: #d6ad60;
 }
 
 .parent-text {
-  font-family: "Great Vibes";
-  font-size: 3em;
+  font-family: "Abyssinica SIL";
+  font-size: 1.7em;
   font-weight: 500;
   text-align: center;
-  color: #000;
+  color: #d6ad60;
 }
 
 .plus-text {
-  font-family: "Great Vibes";
-  font-size: 3em;
-  font-weight: 500;
+  font-family: "Abyssinica SIL";
+  font-size: 1.7em;
+  font-weight: 400;
+  font-style: italic;
   text-align: center;
-  color: #000;
+  color: #d6ad60;
 }
 
 .wedding-card .bottom-text {
   font-family: "Abyssinica SIL";
-  font-size: 2em;
+  font-size: 1.7em;
   font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
-  color: #000;
-}
-
-.hashtag {
-  font-family: "Great Vibes";
-  font-size: 2em;
-  font-weight: 500;
-  text-align: center;
-  color: #000;
+  color: #d6ad60;
 }
 
 /* ------- schedule styles ------- */
 .schedule {
   padding: 50px 20px 50px 20px;
   flex-direction: column;
+  background-color: #000;
   /* background: rebeccapurple; */
 }
 
@@ -278,6 +299,7 @@ section {
   font-weight: 400;
   text-align: center;
   margin-bottom: 20px;
+  color: #eca241;
 }
 
 .schedule .title-area h2 {
@@ -285,6 +307,7 @@ section {
   font-size: 1.8em;
   text-align: center;
   margin-bottom: 30px;
+  color: #d6ad60;
 }
 
 .schedule .content-area {
@@ -306,11 +329,13 @@ section {
   flex-direction: column;
   /* flex-direction: row; */
   border-radius: 30px;
-  box-shadow: 0 0 30px rgb(0 0 0 / 30%);
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
   padding: 30px;
-  /* margin: 20px; */
 
-  /* background: #e1b378; */
+  /* background: #fff; */
 }
 
 .schedule .content-area .content .top {
@@ -335,61 +360,349 @@ section {
   font-family: "Abyssinica SIL";
   font-size: 1.2em;
   font-weight: 600;
+  color: #d6ad60;
 }
 
 .schedule .content-area .content .top p {
   font-family: "Abyssinica SIL";
   font-size: 1.1em;
   font-weight: 500;
+  color: #d6ad60;
   margin: 10px 0 10px 0;
 }
 
 /* ------- rsvp styles ------- */
 .rsvp {
   width: 100%;
-  height: 100vh;
-  flex-direction: column;
+  height: auto;
+  flex-direction: row;
+  padding: 50px 0 20px 0;
 
-  /* background: blue; */
+  background: #000;
+}
+
+.rsvp .content {
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: row; */
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+  padding: 30px;
+  margin: 20px;
+
+  /* background: #fff; */
+}
+
+.rsvp .title {
+  font-family: "Great Vibes";
+  font-size: 4em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.rsvp .text1 {
+  font-family: "Abyssinica SIL";
+  font-size: 1.8em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.rsvp .text2 {
+  font-family: "Abyssinica SIL";
+  font-size: 1.5em;
+  text-align: center;
+  color: #d6ad60;
+}
+
+/* .rsvp .rsvpForm {
+  background-color: aqua;
+} */
+
+.rsvp .rsvpForm .formText {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  /* text-align: center; */
+  color: #d6ad60;
+}
+
+.rsvp .rsvpForm .inputCombine {
+  width: 100%;
+  font-family: "Abyssinica SIL";
+  font-size: 1em;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #eca241;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  /* text-align: center; */
+  color: #000;
+}
+
+.rsvp .rsvpForm .inputCombine:focus {
+  border-style: ridge;
+  border-color: #eca241 !important;
+}
+
+.rsvp .rsvpForm .radioText {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  color: #d6ad60;
+}
+
+input[type="radio"]:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+}
+
+/* ------- gift section styles ------- */
+.gift {
+  width: 100%;
+  /* height: 100vh; */
+  flex-direction: column;
+  padding: 50px 0 20px 0;
+
+  background: #000;
+}
+
+.gift h1 {
+  font-family: "Great Vibes";
+  font-size: 4em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.gift p {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.gift button {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+  cursor: pointer;
+
+  border-radius: 20px;
+  padding: 10px;
+  border-style: solid;
+  border-color: #eca241;
+  background: #000;
+}
+
+.cardContainer {
+  width: 500px;
+  height: 300px;
+  border-radius: 20px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-style: solid;
+  border-color: #eca241;
+  background: #000;
+}
+
+.cardContainer .bankName {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.cardContainer .bankNo {
+  font-family: "Abyssinica SIL";
+  font-size: 1.7em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.cardContainer .name {
+  font-family: "Abyssinica SIL";
+  font-size: 1.5em;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.cardContainer .copyButton {
+  font-family: "Abyssinica SIL";
+  font-size: 1.2em;
+  text-align: center;
+  color: #d6ad60;
+  cursor: pointer;
+
+  border-radius: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #eca241;
+  background: #000;
+}
+
+/* ------- gallery section styles ------- */
+.gallery {
+  width: 100%;
+  /* height: 100vh; */
+  flex-direction: column;
+  padding: 50px 100px 20px 100px;
+
+  background: #000;
+}
+
+.gallery h1 {
+  font-family: "Great Vibes";
+  font-size: 4em;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #eca241;
+}
+
+.gallery .slide-show1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide-show1 .slide.active {
+  opacity: 1;
+  transition: 2s;
+}
+
+.slide-show1 .slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  background: #000;
+
+  border-radius: 10px;
+  padding: 10px;
+  border-style: ridge;
+  border-color: #eca241;
+}
+
+.slide-show1 .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 /* ------- prewedding video styles ------- */
 .video-section {
   width: 100%;
-  height: 100vh;
+  /* height: 100vh; */
   flex-direction: column;
+  padding: 30px 0 30px 0;
 
-  /* background: blue; */
+  background: #000;
+}
+
+.video-section h1 {
+  font-family: "Abyssinica SIL";
+  font-size: 2em;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #d6ad60;
+}
+
+.video-section h2 {
+  font-family: "Abyssinica SIL";
+  font-size: 1.8em;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #d6ad60;
+}
+
+.video-section .hashtag {
+  font-family: "Great Vibes";
+  font-size: 2em;
+  font-weight: 500;
+  text-align: center;
+  color: #eca241;
+  margin-top: 30px;
+}
+
+.video-section iframe {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 770px) {
   /* ------- main styles ------- */
   .main .content .intro {
-    font-size: 1.5em;
+    font-size: 1.2em;
   }
 
   .main .content .name {
-    font-size: 4.7em;
+    font-size: 3.8em;
     margin: 50px 0 50px 0;
   }
 
   .main .content .save {
-    font-size: 3em;
+    font-size: 1.2em;
   }
   .main .content .location {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .main .content .date {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .main .content .day {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .main .content .countdown {
-    font-size: 1.3em;
+    font-size: 1.2em;
   }
 
   .main .slide-show2 {
@@ -424,7 +737,7 @@ section {
   /* ------- wedding card styles ------- */
   .wedding-card {
     width: 100%;
-    height: 70vh;
+    height: auto;
     flex-direction: column;
     padding: 30px 0 30px 0;
 
@@ -433,41 +746,63 @@ section {
 
   .wedding-card .top-text {
     font-size: 1em;
-    margin-bottom: 20px;
+    margin-bottom: 0;
   }
 
   .wedding-card .name-column {
-    margin: 30px 0 80px 0;
+    flex-direction: column;
+    margin: 0 0 20px 0;
 
     /* background: red; */
   }
 
+  .wedding-card .name-column .left {
+    width: 100%;
+
+    /* background: yellow; */
+  }
+
+  .wedding-card .name-column .middle {
+    width: 100%;
+    padding: 30px 0 30px 0;
+
+    /* background: green; */
+  }
+
+  .wedding-card .name-column .right {
+    width: 100%;
+
+    /* background: blue; */
+  }
+
   .name-text {
     font-family: "Great Vibes";
-    font-size: 1.2em;
+    font-size: 2.5em;
     font-weight: 500;
     text-align: center;
-    margin-bottom: 50px;
-    color: #000;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #eca241;
   }
 
   .born-text {
-    font-size: 0.6em;
-    margin-bottom: 10px;
+    font-size: 1em;
+    margin-bottom: 5px;
   }
 
   .parent-text {
-    font-size: 0.7em;
+    font-size: 1em;
   }
 
   .plus-text {
-    font-size: 0.7em;
+    font-size: 1em;
+    margin: 5px 0 5px 0;
   }
 
   .wedding-card .bottom-text {
-    font-size: 0.8em;
+    font-size: 1.1em;
     margin-bottom: 20px;
-    padding: 0 10px 0 10px;
+    padding: 0 20px 0 20px;
   }
 
   .hashtag {
@@ -477,7 +812,7 @@ section {
   /* ------- schedule syles ------- */
 
   .schedule .title-area h1 {
-    font-size: 3em;
+    font-size: 2.1em;
   }
 
   .schedule .title-area h2 {
@@ -501,5 +836,127 @@ section {
   .schedule .content-area .content .top p {
     font-size: 0.9em;
     margin: 5px 0 5px 0;
+  }
+
+  /* ------- rsvp styles ------- */
+  .rsvp {
+    flex-direction: column;
+    padding: 30px 0 20px 0;
+  }
+
+  .rsvp .content {
+    width: 90%;
+  }
+
+  .rsvp .title {
+    font-size: 3em;
+  }
+
+  .rsvp .text1 {
+    font-size: 1em;
+  }
+
+  .rsvp .text2 {
+    font-size: 1em;
+  }
+
+  .rsvp .rsvpForm .formText {
+    font-size: 0.9em;
+  }
+
+  .rsvp .rsvpForm .inputCombine {
+    font-size: 0.9em;
+    padding: 3px;
+  }
+
+  .rsvp .rsvpForm .radioText {
+    font-size: 0.9em;
+  }
+
+  /* ------- gift section styles ------- */
+  .gift {
+    flex-direction: column;
+    padding: 50px 10px 20px 10px;
+
+    background: #000;
+  }
+  .gift h1 {
+    font-size: 3em;
+  }
+
+  .gift p {
+    font-size: 1em;
+  }
+
+  /* .gift button {
+    font-family: "Abyssinica SIL";
+    font-size: 1.2em;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #d6ad60;
+    cursor: pointer;
+
+    border-radius: 10px;
+    padding: 10px;
+    border-style: solid;
+    border-color: #eca241;
+    background: #000;
+  } */
+
+  .cardContainer {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    border-color: #eca241;
+    background: #000; */
+  }
+
+  .cardContainer .bankName {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .bankNo {
+    font-size: 1em;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .name {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  .cardContainer .copyButton {
+    font-family: "Abyssinica SIL";
+    font-size: 1.2em;
+    text-align: center;
+    color: #d6ad60;
+    cursor: pointer;
+
+    border-radius: 10px;
+    padding: 5px;
+    border-style: ridge;
+    border-color: #eca241;
+    background: #000;
+  }
+
+  /* ------- prewedding video styles ------- */
+  .video-section {
+    padding: 30px 10px 30px 10px;
+  }
+  .video-section h1 {
+    font-size: 1.2em;
+  }
+
+  .video-section h2 {
+    font-size: 1.2em;
+  }
+
+  .video-section .hashtag {
+    font-size: 1.2em;
   }
 }
