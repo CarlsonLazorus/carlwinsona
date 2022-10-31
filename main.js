@@ -1,3 +1,68 @@
+//Scroll to top button
+const scrollTopBtn = document.querySelector(".scrollToTop-btn");
+
+window.addEventListener("scroll", function () {
+  scrollTopBtn.classList.toggle("active", this.window.scrollY > 500);
+});
+
+scrollTopBtn.addEventListener("click", () => {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});
+
+//radio button
+function radioAttend() {
+  document.getElementById("totalGuest").style.display = "inline";
+  document.getElementById("br1").style.display = "inline";
+  document.getElementById("br2").style.display = "inline";
+}
+
+function radioNotAttend() {
+  document.getElementById("totalGuest").style.display = "none";
+  document.getElementById("br1").style.display = "none";
+  document.getElementById("br2").style.display = "none";
+}
+
+function radio1() {
+  document.getElementById("guest1").style = "display: inline; margin-top:10px";
+  document.getElementById("guest2").style.display = "none";
+  document.getElementById("guest3").style.display = "none";
+  document.getElementById("guest4").style.display = "none";
+  document.getElementById("guest5").style.display = "none";
+}
+
+function radio2() {
+  document.getElementById("guest1").style = "display: inline; margin-top:10px";
+  document.getElementById("guest2").style = "display: inline; margin-top:10px";
+  document.getElementById("guest3").style.display = "none";
+  document.getElementById("guest4").style.display = "none";
+  document.getElementById("guest5").style.display = "none";
+}
+
+function radio3() {
+  document.getElementById("guest1").style = "display: inline; margin-top:10px";
+  document.getElementById("guest2").style = "display: inline; margin-top:10px";
+  document.getElementById("guest3").style = "display: inline; margin-top:10px";
+  document.getElementById("guest4").style.display = "none";
+  document.getElementById("guest5").style.display = "none";
+}
+
+function radio4() {
+  document.getElementById("guest1").style = "display: inline; margin-top:10px";
+  document.getElementById("guest2").style = "display: inline; margin-top:10px";
+  document.getElementById("guest3").style = "display: inline; margin-top:10px";
+  document.getElementById("guest4").style = "display: inline; margin-top:10px";
+  document.getElementById("guest5").style.display = "none";
+}
+
+function radio5() {
+  document.getElementById("guest1").style = "display: inline; margin-top:10px";
+  document.getElementById("guest2").style = "display: inline; margin-top:10px";
+  document.getElementById("guest3").style = "display: inline; margin-top:10px";
+  document.getElementById("guest4").style = "display: inline; margin-top:10px";
+  document.getElementById("guest5").style = "display: inline; margin-top:10px";
+}
+
 // //Javascript for reveal transition
 // //common reveal options to create reveal animations
 // ScrollReveal({
@@ -45,8 +110,10 @@ var x = setInterval(function () {
   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
   // Output the result in an element with id="countdown"
-  document.getElementById("countdown1").innerHTML =
-    days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("countdownDays").innerHTML = days;
+  document.getElementById("countdownHours").innerHTML = hours;
+  document.getElementById("countdownMinutes").innerHTML = minutes;
+  document.getElementById("countdownSeconds").innerHTML = seconds;
 
   // If the count down is over, write some text
   if (distance < 0) {

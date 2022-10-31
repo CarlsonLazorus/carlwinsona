@@ -11,17 +11,40 @@
 
 <body>
 
+    <!--=======Scroll to top button=======-->
+    <div class="scrollToTop-btn flex-center">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
     <section class="main">
         <div class="content">
             <!-- <img src="images/gold/circle.png" alt=""> -->
-            <h1 class="intro">THE WEDDING OF</h1>
+            <h1 class="intro">The Wedding of </h1>
             <h1 class="name">Carlwinsona</h1>
-            <h1 class="save">Save the date!</h1>
-            <p class="date">31.12.22</p>
+            <!-- <h1 class="save">Save the date!</h1> -->
+            <p class="date">31 . 12 . 22</p>
             <!-- <p class="date">December 31, 2022</p> -->
-            <p class="day">(SATURDAY)</p>
-            <p class="location">Tambunan, Sabah, Malaysia</p>
-            <p class="countdown" id="countdown1"></p>
+            <!-- <p class="day">(SATURDAY)</p> -->
+            <!-- <p class="location">Tambunan, Sabah, Malaysia</p>   -->
+            <div class="countdownContainer">
+                <div class="countdownContent">
+                    <p class="countdown" id="countdownDays"></p>
+                    <p class="countdownText">Days</p>
+                </div>
+                <div class="countdownContent">
+                    <p class="countdown" id="countdownHours"></p>
+                    <p class="countdownText">Hours</p>
+                </div>
+                <div class="countdownContent">
+                    <p class="countdown" id="countdownMinutes"></p>
+                    <p class="countdownText">Minutes</p>
+                </div>
+                <div class="countdownContent">
+                    <p class="countdown" id="countdownSeconds"></p>
+                    <p class="countdownText">Seconds</p>
+                </div>
+            </div>
+
         </div>
 
         <!-- <div class="slide-show1" id="desktop">
@@ -121,6 +144,12 @@
         <h2 class="bottom-text">We request the pleasure of your company at the celebration of our wedding.</h2>
     </section>
 
+    <section class="midImage">
+        <!-- <img src="images/v4.JPG" alt=""> -->
+        <div class="overlay"></div>
+
+    </section>
+
     <section class="schedule">
         <div class="title-area">
             <h1>Our Wedding Tentative</h1>
@@ -198,38 +227,51 @@
 
             <form class="rsvpForm" action="">
                 <label class="formText">Name: </label>
-                <br>
-                <input class="inputCombine" type="text" placeholder="eg: Carlwinsona" required>
+                <input class="inputCombine" id="name" type="text" placeholder="eg: Carlwinsona" required>
                 <br><br>
-
                 <label class="formText">Contact No: </label>
-                <br>
-                <input class="inputCombine" type="tel" id="phoneNo" name="phone" placeholder="eg:012-3456789" required>
+                <input class="inputCombine" type="tel" id="phoneNo" name="phone" placeholder="eg: 012-3456789" required>
                 <br><br>
-
                 <label class="formText"> Will you attend: </label>
                 <br>
-                <input type="radio" name="attend" value="Yes" required> <label class="radioText" for="">Yes</label>
+                <input type="radio" name="attend" value="Yes" onclick="radioAttend()" required> <label class="radioText"
+                    for="">Yes</label>
                 &emsp;
-                <input type="radio" name="attend" value="No" required> <label class="radioText" for="">No</label>
-                <br><br>
+                <input type="radio" name="attend" value="No" onclick="radioNotAttend()" required> <label
+                    class="radioText" for="">No</label>
+                <br id="br1" style="display:none;"><br id="br2" style="display:none;">
 
-                <label class="formText">Additional guest?/Total attendance: </label>
-                <br>
-                <input type="radio" name="gender" value="1" required> <label class="radioText" for="">1</label> &emsp;
-                <input type="radio" name="gender" value="2" required> <label class="radioText" for="">2</label> &emsp;
-                <input type="radio" name="gender" value="3" required> <label class="radioText" for="">3</label> &emsp;
-                <input type="radio" name="gender" value="4" required> <label class="radioText" for="">4</label> &emsp;
-                <input type="radio" name="gender" value="5" required> <label class="radioText" for="">5</label>
-                <br><br>
+                <div id="totalGuest" style="display:none;">
+                    <label class="formText">Additional guest?/Total attendance: </label>
+                    <br>
+                    <input type="radio" name="gender" value="1" onclick="radio1()" required> <label class="radioText"
+                        for="">1</label> &emsp;
+                    <input type="radio" name="gender" value="2" onclick="radio2()" required> <label class="radioText"
+                        for="">2</label> &emsp;
+                    <input type="radio" name="gender" value="3" onclick="radio3()" required> <label class="radioText"
+                        for="">3</label> &emsp;
+                    <input type="radio" name="gender" value="4" onclick="radio4()" required> <label class="radioText"
+                        for="">4</label> &emsp;
+                    <input type="radio" name="gender" value="5" onclick="radio5()" required> <label class="radioText"
+                        for="">5</label>
 
+                    <input class="inputCombine" id="guest1" type="text" placeholder="eg: Guest1" style="display:none;">
+                    <input class="inputCombine" id="guest2" type="text" placeholder="eg: Guest2" style="display:none;">
+                    <input class="inputCombine" id="guest3" type="text" placeholder="eg: Guest3" style="display:none;">
+                    <input class="inputCombine" id="guest4" type="text" placeholder="eg: Guest4" style="display:none;">
+                    <input class="inputCombine" id="guest5" type="text" placeholder="eg: Guest5" style="display:none;">
+                </div>
+
+                <br><br>
                 <label class="formText"> Wishes: </label>
-                <br>
-                <input class="inputCombine" type="text" id="wish" name="phone" placeholder="Happy Wedding Day" required>
+                <textarea name="wish" id="wish" cols="50" rows="4" placeholder="Happy Wedding Day" required></textarea>
+                <!-- <input class="inputWish" type="text" id="wish" name="phone" placeholder="Happy Wedding Day" required> -->
                 <br><br>
 
                 <input class="inputCombine" type="submit" value="Send" name="submit">
             </form>
+
+
         </div>
 
         <div class="content">
