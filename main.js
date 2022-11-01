@@ -1,3 +1,47 @@
+// function disableScroll() {
+//   // Get the current page scroll position
+//   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+//   (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
+//     // if any scroll is attempted,
+//     // set this to the previous value
+//     (window.onscroll = function () {
+//       window.scrollTo(scrollLeft, scrollTop);
+//     });
+// }
+
+// function enableScroll() {
+//   window.onscroll = function () {};
+// }
+
+//open invitation
+window.addEventListener("load", function () {
+  setTimeout(function open(event) {
+    document.querySelector(".modal").style.display = "block";
+    // disableScroll();
+  }, 0);
+});
+document.querySelector("#close").addEventListener("click", function () {
+  document.querySelector(".modal").style.display = "none";
+  playAudio();
+  // enableScroll();
+});
+
+//Mute Unmute Music Background
+var audio = document.getElementById("music");
+
+function playAudio() {
+  audio.play();
+  // document.getElementById("muteButton").style.display = "inline";
+  // document.getElementById("unmuteButton").style.display = "none";
+}
+
+function pauseAudio() {
+  audio.pause = true;
+  // vid2.muted = true;
+  // document.getElementById("muteButton").style.display = "none";
+  // document.getElementById("unmuteButton").style.display = "inline";
+}
+
 //Scroll to top button
 const scrollTopBtn = document.querySelector(".scrollToTop-btn");
 

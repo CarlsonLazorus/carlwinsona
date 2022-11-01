@@ -7,6 +7,10 @@
     <title>Carlwinsona</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script> -->
 </head>
 
 <body>
@@ -16,35 +20,53 @@
         <i class="fas fa-arrow-up"></i>
     </div>
 
-    <section class="main">
-        <div class="content">
-            <!-- <img src="images/gold/circle.png" alt=""> -->
-            <h1 class="intro">The Wedding of </h1>
-            <h1 class="name">Carlwinsona</h1>
-            <!-- <h1 class="save">Save the date!</h1> -->
-            <p class="date">31 . 12 . 22</p>
-            <!-- <p class="date">December 31, 2022</p> -->
-            <!-- <p class="day">(SATURDAY)</p> -->
-            <!-- <p class="location">Tambunan, Sabah, Malaysia</p>   -->
-            <div class="countdownContainer">
-                <div class="countdownContent">
-                    <p class="countdown" id="countdownDays"></p>
-                    <p class="countdownText">Days</p>
-                </div>
-                <div class="countdownContent">
-                    <p class="countdown" id="countdownHours"></p>
-                    <p class="countdownText">Hours</p>
-                </div>
-                <div class="countdownContent">
-                    <p class="countdown" id="countdownMinutes"></p>
-                    <p class="countdownText">Minutes</p>
-                </div>
-                <div class="countdownContent">
-                    <p class="countdown" id="countdownSeconds"></p>
-                    <p class="countdownText">Seconds</p>
+    <audio id="music" loop>
+        <source src="Florida Georgia Line - Simple.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="modal">
+        <div class="container">
+            <div class="wrapper">
+                <div class="lid one"></div>
+                <div class="lid two"></div>
+                <div class="envelope"></div>
+                <div class="letter">
+                    <a href="#main-section" id="close">Open Invitation</a>
                 </div>
             </div>
+        </div>
+    </div>
 
+    <section class="main" id="main-section">
+        <div class="content">
+            <div class="top-area">
+                <h1 class="intro">The Wedding of </h1>
+                <h1 class="name">Carlwinsona</h1>
+                <p class="date">31 . 12 . 22</p>
+            </div>
+            <div class="bottom-area">
+                <p class="day">(SATURDAY)</p>
+                <p class="location">Tambunan, Sabah, Malaysia</p>
+                <h1 class="save">Save the date!</h1>
+                <div class="countdownContainer">
+                    <div class="countdownContent">
+                        <p class="countdown" id="countdownDays"></p>
+                        <p class="countdownText">Days</p>
+                    </div>
+                    <div class="countdownContent">
+                        <p class="countdown" id="countdownHours"></p>
+                        <p class="countdownText">Hours</p>
+                    </div>
+                    <div class="countdownContent">
+                        <p class="countdown" id="countdownMinutes"></p>
+                        <p class="countdownText">Minutes</p>
+                    </div>
+                    <div class="countdownContent">
+                        <p class="countdown" id="countdownSeconds"></p>
+                        <p class="countdownText">Seconds</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- <div class="slide-show1" id="desktop">
@@ -165,7 +187,8 @@
                     <p class="title"><i class="fas fa-clock"></i> 10:00am</p>
                     <!-- <i class="fas fa-church"></i> -->
                     <p><i class="fas fa-church"></i> St.Francis Cabrini Catholic Church, Tambunan, Sabah.</p>
-                    <p><i class="fas fa-dove"></i> A marriage built in Christ is a marriage built to last. Join us as we
+                    <p><i class="fas fa-dove"></i> A marriage built in Christ is a marriage built to last. Join us
+                        as we
                         unite in Holy Matrimony
                         and exchange our marriage vows.</p>
                     <p><i class="fas fa-tshirt"></i> Dress Code: Traditional Attire</p>
@@ -199,7 +222,8 @@
                     <p class="title">WEDDING RECEPTION</p>
                     <p class="title"><i class="fas fa-clock"></i> 5:00pm - 1:00am</p>
                     <p><i class="fas fa-landmark"></i> Tandarason Resort and Country Club</p>
-                    <p><i class="fas fa-glass-cheers"></i> We're delighted to be able to celebrate our love amongst our
+                    <p><i class="fas fa-glass-cheers"></i> We're delighted to be able to celebrate our love amongst
+                        our
                         beloved family and friends from
                         near and far. Enjoy dinner, drinks, and lots of dancing!</p>
                     <p><i class="fas fa-tshirt"></i> Dress Code: Traditional Attire</p>

@@ -9,6 +9,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Pinyon+Script&display=swap");
 
+/* gold color code */
+/* color: #e8ab16; */
+/* color: #e1a730; */
+/* color: #b07d26; */
+/* color: #e1a140; */
+/* color: #d6ad60; */
+/* color: #b68d40; */
+/* color: #eca241; */
+/* color: #d49d40; */
+
 * {
   margin: 0;
   padding: 0;
@@ -21,16 +31,8 @@ html {
 }
 
 body {
-  /* position: fixed; */
-  /* width: 100%; */
-  /* height: 100%; */
+  width: 100%;
   height: 100vh;
-  /* width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center; */
-
-  /* background: #e1b378; */
 }
 
 /*=======Scroll to top button=======*/
@@ -75,6 +77,148 @@ section {
   align-items: center;
 }
 
+/*=======Pop up modal after load=======*/
+.modal {
+  background: #d6ad60;
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  z-index: 99999;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal .container {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: url(images/v4.JPG) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.modal .container .wrapper a {
+  display: block;
+  width: 150px;
+  position: relative;
+  margin: 20px auto;
+  text-align: center;
+  background-color: #b68d40;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 5px 0;
+}
+
+.modal .container .wrapper {
+  height: 200px;
+  width: 300px;
+  background-color: #b68d40;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  z-index: 0;
+
+  animation: tremble 1s infinite;
+}
+
+@keyframes tremble {
+  0% {
+    transform: rotate(-1deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(1deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.modal .container .wrapper .lid {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-right: 150px solid transparent;
+  border-bottom: 100px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: transform 0.25s linear;
+}
+
+/* Lid when closed */
+.modal .container .wrapper .lid.one {
+  border-top: 100px solid #b07d26;
+  transform: rotateX(0deg);
+  z-index: 3;
+  transition-delay: 0.75s;
+}
+
+/* Lid when opened */
+.modal .container .wrapper .lid.two {
+  border-top: 100px solid #b07d26;
+  transform: rotateX(90deg);
+  z-index: 1;
+  transition-delay: 0.5s;
+}
+
+.modal .container .wrapper .envelope {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-top: 100px solid transparent;
+  border-right: 150px solid #b68d40;
+  border-bottom: 100px solid #b68d40;
+  border-left: 150px solid #b68d40;
+  z-index: 3;
+}
+
+.modal .container .wrapper .letter {
+  position: absolute;
+  top: 0;
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  border-radius: 15px;
+  z-index: 2;
+  transition: 0.5s;
+}
+
+.modal .container .wrapper .letter p {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  color: #3b4049;
+}
+
+.modal .container .wrapper:hover .lid.one {
+  transform: rotateX(90deg);
+  transition-delay: 0s;
+}
+
+.modal .container .wrapper:hover .lid.two {
+  transform: rotateX(180deg);
+  transition-delay: 0.25s;
+}
+
+.modal .container .wrapper:hover .letter {
+  transform: translateY(-50px);
+  transition-delay: 0.5s;
+}
+
+/*=======Main section=======*/
 .main {
   width: 100%;
   height: 100vh;
@@ -88,27 +232,20 @@ section {
 }
 
 .main .content {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  z-index: 999;
-  height: 100vh;
-
-  /* background: url(images/h3.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-  /* background-attachment: fixed; */
-
   background: rgba(0, 0, 0, 0.5);
 }
 
-.main .content .intro {
+/* .main .content .top-area {
+  background: green;
+} */
+
+.main .content .top-area .intro {
   font-family: "Quicksand";
   font-size: 18px;
   font-weight: 500;
@@ -116,41 +253,15 @@ section {
   color: #d6ad60;
 }
 
-.main .content .name {
+.main .content .top-area .name {
   font-family: "Great Vibes";
   font-size: 64px;
   font-weight: 500;
   text-align: center;
   margin: 10px 0 10px 0;
   color: #eca241;
-  /* color: #e8ab16; */
-  /* color: #e1a730; */
-
-  /* color: #b07d26; */
-
-  /* color: #e1a140; */
-  /* color: #d6ad60; */
-  /* color: #b68d40; */
-  /* color: #eca241; */
-  /* color: #d49d40; */
 }
-
-.main .content .save {
-  font-family: "Quicksand";
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  color: #d6ad60;
-}
-.main .content .location {
-  font-family: "Quicksand";
-  font-size: 18px;
-  font-weight: 500;
-  text-align: center;
-  color: #d6ad60;
-}
-
-.main .content .date {
+.main .content .top-area .date {
   font-family: "Quicksand";
   font-size: 18px;
   font-weight: 500;
@@ -159,7 +270,18 @@ section {
   margin-bottom: 10px;
 }
 
-.main .content .day {
+/* .main .content .bottom-area {
+  background: blue;
+} */
+
+.main .content .bottom-area .save {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d6ad60;
+}
+.main .content .bottom-area .location {
   font-family: "Quicksand";
   font-size: 18px;
   font-weight: 500;
@@ -167,18 +289,26 @@ section {
   color: #d6ad60;
 }
 
-.main .content .countdownContainer {
+.main .content .bottom-area .day {
+  font-family: "Quicksand";
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: #d6ad60;
+}
+
+.main .content .bottom-area .countdownContainer {
   display: flex;
   flex-direction: row;
 }
 
-.main .content .countdownContainer .countdownContent {
+.main .content .bottom-area .countdownContainer .countdownContent {
   padding: 0 25px 0 25px;
 
   /* background: #000; */
 }
 
-.main .content .countdownContainer .countdownContent .countdown {
+.main .content .bottom-area .countdownContainer .countdownContent .countdown {
   font-family: "Sahitya";
   font-size: 30px;
   font-weight: 400;
@@ -186,7 +316,12 @@ section {
   color: #d6ad60;
 }
 
-.main .content .countdownContainer .countdownContent .countdownText {
+.main
+  .content
+  .bottom-area
+  .countdownContainer
+  .countdownContent
+  .countdownText {
   font-family: "Quicksand";
   font-size: 14px;
   font-weight: 400;
@@ -817,47 +952,55 @@ input[type="radio"]:checked:after {
 @media (max-width: 770px) {
   /* ------- main styles ------- */
 
-  .main .content .intro {
+  .main .content {
+    justify-content: space-between;
+    padding: 70px 0 0 0;
+  }
+  .main .content .top-area .intro {
     font-size: 14px;
-    /* padding-top: 65px; */
   }
 
-  .main .content .name {
-    font-size: 40px;
+  .main .content .top-area .name {
+    font-size: 50px;
     margin: 10px 0 0 0;
   }
 
-  .main .content .save {
-    font-size: 14px;
-  }
-  .main .content .location {
-    font-size: 14px;
-  }
-
-  .main .content .date {
+  .main .content .top-area .date {
     font-size: 14px;
     margin-bottom: 100px;
   }
 
-  .main .content .day {
+  .main .content .bottom-area .save {
+    font-size: 14px;
+  }
+  .main .content .bottom-area .location {
     font-size: 14px;
   }
 
-  .main .content .countdownContainer {
+  .main .content .bottom-area .day {
+    font-size: 14px;
+  }
+
+  .main .content .bottom-area .countdownContainer {
     display: flex;
     flex-direction: row;
     padding: 0 0 200px 0;
   }
 
-  .main .content .countdownContainer .countdownContent {
+  .main .content .bottom-area .countdownContainer .countdownContent {
     padding: 0 5px 0 5px;
   }
 
-  .main .content .countdownContainer .countdownContent .countdown {
+  .main .content .bottom-area .countdownContainer .countdownContent .countdown {
     font-size: 30px;
   }
 
-  .main .content .countdownContainer .countdownContent .countdownText {
+  .main
+    .content
+    .bottom-area
+    .countdownContainer
+    .countdownContent
+    .countdownText {
     font-size: 14px;
     margin-top: -10px;
   }
