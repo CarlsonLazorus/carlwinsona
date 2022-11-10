@@ -16,30 +16,43 @@
 //open invitation
 window.addEventListener("load", function () {
   setTimeout(function open(event) {
-    document.querySelector(".modal").style.display = "block";
+    document.querySelector(".modal").style = "opacity: 1";
+    // document.querySelector(".modal").style.display = "block";
     // disableScroll();
   }, 0);
 });
+
 document.querySelector("#close").addEventListener("click", function () {
-  document.querySelector(".modal").style.display = "none";
+  document.querySelector(".modal").style =
+    "opacity: 0; transition: 0.5s ease; z-index: -999";
+  // document.querySelector(".modal").style.display = "none";
   playAudio();
   // enableScroll();
 });
+
+//open envelope
+function openEnvelope() {
+  document.getElementById("lid1").style =
+    "transform: rotateX(90deg); transition-delay: 0s; cursor: pointer;";
+  document.getElementById("lid2").style =
+    "transform: rotateX(180deg); transition-delay: 0.25s; cursor: pointer;";
+  document.getElementById("paper").style =
+    "transform: translateY(-50px); transition-delay: 0.5s; cursor: pointer;";
+}
 
 //Mute Unmute Music Background
 var audio = document.getElementById("music");
 
 function playAudio() {
   audio.play();
-  // document.getElementById("muteButton").style.display = "inline";
-  // document.getElementById("unmuteButton").style.display = "none";
+  document.getElementById("playButton").style.display = "inline";
+  document.getElementById("pauseButton").style.display = "none";
 }
 
 function pauseAudio() {
-  audio.pause = true;
-  // vid2.muted = true;
-  // document.getElementById("muteButton").style.display = "none";
-  // document.getElementById("unmuteButton").style.display = "inline";
+  audio.pause();
+  document.getElementById("playButton").style.display = "none";
+  document.getElementById("pauseButton").style.display = "inline";
 }
 
 //Scroll to top button
