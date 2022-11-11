@@ -1,44 +1,28 @@
-// function disableScroll() {
-//   // Get the current page scroll position
-//   scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-//   (scrollLeft = window.pageXOffset || document.documentElement.scrollLeft),
-//     // if any scroll is attempted,
-//     // set this to the previous value
-//     (window.onscroll = function () {
-//       window.scrollTo(scrollLeft, scrollTop);
-//     });
-// }
+// const observer = new IntersectionObserver((entries) => {
+//   entries.forEach((entry) => {
+//     console.log(entry);
+//     if (entry.isIntersecting) {
+//       entry.target.classList.add("show1");
+//       entry.target.classList.add("show2");
+//     } else {
+//       entry.target.classList.remove("show1");
+//       entry.target.classList.remove("show2");
+//     }
+//   });
+// });
 
-// function enableScroll() {
-//   window.onscroll = function () {};
-// }
-
-//open invitation
-window.addEventListener("load", function () {
-  setTimeout(function open(event) {
-    document.querySelector(".modal").style = "opacity: 1";
-    // document.querySelector(".modal").style.display = "block";
-    // disableScroll();
-  }, 0);
-});
+// const hiddenElements = document.querySelectorAll(".hidden1");
+// hiddenElements.forEach((el) => observer.observe(el));
 
 document.querySelector("#close").addEventListener("click", function () {
-  document.querySelector(".modal").style =
-    "opacity: 0; transition: 0.5s ease; z-index: -999";
-  // document.querySelector(".modal").style.display = "none";
+  document.querySelector("body").style = " margin: 0; overflow: visible";
   playAudio();
-  // enableScroll();
 });
 
-//open envelope
-function openEnvelope() {
-  document.getElementById("lid1").style =
-    "transform: rotateX(90deg); transition-delay: 0s; cursor: pointer;";
-  document.getElementById("lid2").style =
-    "transform: rotateX(180deg); transition-delay: 0.25s; cursor: pointer;";
-  document.getElementById("paper").style =
-    "transform: translateY(-50px); transition-delay: 0.5s; cursor: pointer;";
-}
+$(window).on("beforeunload", function () {
+  $("body").hide();
+  $(window).scrollTop(0);
+});
 
 //Mute Unmute Music Background
 var audio = document.getElementById("music");
@@ -120,22 +104,41 @@ function radio5() {
   document.getElementById("guest5").style = "display: inline; margin-top:10px";
 }
 
-// //Javascript for reveal transition
-// //common reveal options to create reveal animations
-// ScrollReveal({
-//   reset: false,
-//   distance: "60px",
-//   duration: 2500,
-//   delay: 400,
+//Javascript for reveal transition
+//common reveal options to create reveal animations
+ScrollReveal({
+  reset: false,
+  duration: 2000,
+  delay: 400,
+  distance: "60px",
+});
+
+// ScrollReveal().reveal(".intro ", { delay: 700, origin: "top", interval: 200 });
+// ScrollReveal().reveal(".name ", { delay: 600, origin: "top", interval: 100 });
+// ScrollReveal().reveal(".save ", { delay: 500, origin: "top", interval: 100 });
+// ScrollReveal().reveal(".date ", { delay: 400, origin: "top", interval: 100 });
+// ScrollReveal().reveal(".day ", { delay: 300, origin: "top", interval: 100 });
+// ScrollReveal().reveal(".location", {
+//   delay: 200,
+//   origin: "top",
+//   interval: 100,
 // });
 
+ScrollReveal().reveal(" .top-text, .countdownContainer", {
+  scale: 0.1,
+  delay: 1000,
+  interval: 200,
+});
+
 // //target elements, and specify options to create reveal animations
-// ScrollReveal().reveal("", { delay: 700, origin: "bottom", interval: 200 });
-// ScrollReveal().reveal("", { delay: 600, origin: "left", interval: 200 });
+// ScrollReveal().reveal(".intro", { delay: 700, interval: 200 });
+
 // ScrollReveal().reveal(".shots", { delay: 600, origin: "right", interval: 200 });
 // ScrollReveal().reveal(".locateEureka", { delay: 700, origin: "bottom" });
-// ScrollReveal().reveal("", { delay: 500, origin: "bottom", interval: 200 });
-// ScrollReveal().reveal(".gallery", { delay: 500, origin: "top", interval: 200 });
+ScrollReveal().reveal(
+  ".photo, .name-text, .born-text, .parent-text, .plus-text",
+  { delay: 500, origin: "bottom", interval: 200 }
+);
 
 //Change image by window width
 // let w = window.innerWidth;
