@@ -1,19 +1,3 @@
-// const observer = new IntersectionObserver((entries) => {
-//   entries.forEach((entry) => {
-//     console.log(entry);
-//     if (entry.isIntersecting) {
-//       entry.target.classList.add("show1");
-//       entry.target.classList.add("show2");
-//     } else {
-//       entry.target.classList.remove("show1");
-//       entry.target.classList.remove("show2");
-//     }
-//   });
-// });
-
-// const hiddenElements = document.querySelectorAll(".hidden1");
-// hiddenElements.forEach((el) => observer.observe(el));
-
 document.querySelector("#close").addEventListener("click", function () {
   document.querySelector("body").style = " margin: 0; overflow: visible";
   playAudio();
@@ -24,20 +8,20 @@ $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
 });
 
-//Mute Unmute Music Background
-var audio = document.getElementById("music");
+// //Mute Unmute Music Background
+// var audio = document.getElementById("music");
 
-function playAudio() {
-  audio.play();
-  document.getElementById("playButton").style.display = "inline";
-  document.getElementById("pauseButton").style.display = "none";
-}
+// function playAudio() {
+//   audio.play();
+//   document.getElementById("playButton").style.display = "inline";
+//   document.getElementById("pauseButton").style.display = "none";
+// }
 
-function pauseAudio() {
-  audio.pause();
-  document.getElementById("playButton").style.display = "none";
-  document.getElementById("pauseButton").style.display = "inline";
-}
+// function pauseAudio() {
+//   audio.pause();
+//   document.getElementById("playButton").style.display = "none";
+//   document.getElementById("pauseButton").style.display = "inline";
+// }
 
 //Scroll to top button
 const scrollTopBtn = document.querySelector(".scrollToTop-btn");
@@ -124,9 +108,9 @@ ScrollReveal({
 //   interval: 100,
 // });
 
-ScrollReveal().reveal(" .top-text, .countdownContainer", {
+ScrollReveal().reveal(".countdownContainer", {
   scale: 0.1,
-  delay: 1000,
+  delay: 100,
   interval: 200,
 });
 
@@ -136,8 +120,8 @@ ScrollReveal().reveal(" .top-text, .countdownContainer", {
 // ScrollReveal().reveal(".shots", { delay: 600, origin: "right", interval: 200 });
 // ScrollReveal().reveal(".locateEureka", { delay: 700, origin: "bottom" });
 ScrollReveal().reveal(
-  ".photo, .name-text, .born-text, .parent-text, .plus-text",
-  { delay: 500, origin: "bottom", interval: 200 }
+  ".top-text, .photo, .name-text, .born-text, .parent-text, .plus-text",
+  { delay: 100, origin: "bottom", interval: 100 }
 );
 
 //Change image by window width

@@ -30,10 +30,17 @@
         <i class="fas fa-volume-mute" id="pauseButton" onclick="playAudio()"></i>
     </div>
 
+    <div class="home" id="myHome">
+        <video id="myVideoDesktop" class="videoDesktop" src="videos/BG1.mp4" autoplay muted loop playsinline></video>
+    </div>
+
+    <div class="BGoverlay" id="backgroundBlur"></div>
+
+
     <section class="main" id="main-section">
         <div class="content">
             <div class="top-area">
-                <h1 class="intro">The Wedding of </h1>
+                <h1 class="intro">The Wedding of</h1>
                 <h1 class="name">Carlwinsona</h1>
                 <h1 class="save">Save the date!</h1>
             </div>
@@ -60,7 +67,8 @@
                         <p class="countdownText">Seconds</p>
                     </div>
                 </div>
-                <a href="#wedCard-section" id="close">Open Invitation</a>
+
+                <a href="#Invitation" id="close">Open Invitation</a>
             </div>
         </div>
 
@@ -134,34 +142,74 @@
 
     </section>
 
+    <section class="circle-section" id="Invitation">
+        <h1 class="bride">Winna</h1>
+        <img src="images/1.JPG" alt="">
+        <h1 class="groom">Carlson</h1>
+    </section>
+
+    <section class="quote-section">
+        <div class="logo">CW</div>
+        <h1 class="quote">And as of His Signs, He created mates for you from your souls that you may find rest in
+            them.
+            And He put between you love and mercy (compassion). Most surely there are Signs (proofs) in this for a
+            people who reflect</h1>
+    </section>
+
     <section class="wedding-card" id="wedCard-section">
         <!-- <div class="content"> -->
         <h1 class="top-text">TOGETHER WITH OUR FAMILIES</h1>
-        <div class="name-column">
+        <div class="top">
             <div class="left">
-                <img class="photo" src="images/v3.JPG" alt="">
-                <h1 class="name-text">Carlson Lazorus</h1>
-                <!-- <h1 class="name-text">Lazorus</h1> -->
-                <p class="born-text">7th son of:</p>
-                <h2 class="parent-text">Mr. Lazorus Sabuting</h2>
-                <h2 class="plus-text">and</h2>
-                <h2 class="parent-text">Mdm. Nuriah Nain</h2>
-            </div>
-            <div class="middle">
-                <h1 class="name-text">&</h1>
+                <img class="photo" src="images/71.JPG" alt="">
             </div>
             <div class="right">
-                <img class="photo bridesImg" src="images/v2.JPG" alt="">
-                <h1 class="name-text">Winna P. Kayau</h1>
-                <!-- <h1 class="name-text">Primus Kayau</h1> -->
-                <p class="born-text">Eldest daughter of:</p>
+                <h1 class="name-text">Winna</h1>
+                <h2 class="fullname">Winna Primus Kayau</h2>
+                <p class="born-text">The eldest daughter of:</p>
                 <h2 class="parent-text">The late Mr. Hilde P. Kayau</h2>
                 <h2 class="plus-text">and</h2>
                 <h2 class="parent-text">Mdm. Shirlyna Yong</h2>
             </div>
         </div>
+        <div class="bottom">
+            <div class="left">
+                <h1 class="name-text">Carlson</h1>
+                <h2 class="fullname">Carlson Lazorus</h2>
+                <p class="born-text">The 7th son of:</p>
+                <h2 class="parent-text">Mr. Lazorus Sabuting</h2>
+                <h2 class="plus-text">and</h2>
+                <h2 class="parent-text">Mdm. Nuriah Nain</h2>
+            </div>
+            <div class="right">
+                <img class="photo" src="images/61.JPG" alt="">
+            </div>
+        </div>
+        <!-- <div class="name-column">
+            <div class="left">
+                <img class="photo" src="images/7.JPG" alt="">
+                <h1 class="name-text">Winna</h1>
+                <h2 class="fullname">Winna Primus Kayau</h2>
+                <p class="born-text">The eldest daughter of:</p>
+                <h2 class="parent-text">The late Mr. Hilde P. Kayau</h2>
+                <h2 class="plus-text">and</h2>
+                <h2 class="parent-text">Mdm. Shirlyna Yong</h2>
+            </div>
+            <div class="middle">
+                <h1 class="name-text">&</h1>
+            </div>
+            <div class="right">
+                <img class="photo" src="images/6.JPG" alt="">
+                <h1 class="name-text">Carlson</h1>
+                <h2 class="fullname">Carlson Lazorus</h2>
+                <p class="born-text">The 7th son of:</p>
+                <h2 class="parent-text">Mr. Lazorus Sabuting</h2>
+                <h2 class="plus-text">and</h2>
+                <h2 class="parent-text">Mdm. Nuriah Nain</h2>
+            </div>
+        </div> -->
         <h2 class="bottom-text">We request the pleasure of your company at the celebration of our wedding.</h2>
-        <!-- </div> -->
+
     </section>
 
     <section class="midImage">
@@ -201,8 +249,24 @@
             </div>
             <div class="content">
                 <div class="top">
+                    <p class="title">CHINESE TEA CEREMONY</p>
+                    <p class="title"><i class="fas fa-clock"></i> 1:00pm - 1:40pm</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Tambunan Village Resort Centre</p>
+                    <p><i class="fas fa-tshirt"></i> Dress Code: Traditional Attire</p>
+
+                </div>
+
+                <div class="bottom">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15880.898632559267!2d116.3753629!3d5.6806335!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf1268eb6f6180695!2sTambunan%20Village%20Resort%20Centre!5e0!3m2!1sen!2smy!4v1664345211763!5m2!1sen!2smy"
+                        width="100%" height="100%" style="border:0; border-radius: 10px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <div class="content">
+                <div class="top">
                     <p class="title">MOGONGOI</p>
-                    <p class="title"><i class="fas fa-clock"></i> 2:00pm</p>
+                    <p class="title"><i class="fas fa-clock"></i> 2:00pm - 4:00pm</p>
                     <p><i class="fas fa-map-marker-alt"></i> Tambunan Village Resort Centre</p>
                     <p><i class="fas fa-tshirt"></i> Dress Code: Traditional Attire</p>
 
@@ -404,6 +468,20 @@
 
         <p class="hashtag">#carlwinsona'shappilyeverafter</p>
 
+    </section>
+
+    <section class="lastImg-section">
+        <div class="overlay">
+            <p class="intro">See You on Our Big Day</p>
+            <h1 class="names">Winna & Carlson</h1>
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <div class="logo">
+            <p>Logo Here</p>
+        </div>
     </section>
 
 </body>
