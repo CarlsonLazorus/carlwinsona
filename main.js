@@ -1,11 +1,21 @@
 document.querySelector("#close").addEventListener("click", function () {
-  document.querySelector("body").style = " margin: 0; overflow: visible";
+  document.querySelector("body").style = "overflow: visible";
+  $("html,body").animate(
+    {
+      scrollTop: $(".circle-section").offset().top,
+    },
+    "fast"
+  );
   playAudio();
 });
 
 $(window).on("beforeunload", function () {
-  $("body").hide();
   $(window).scrollTop(0);
+  // $(window).scrollTop: $(".circle-section").offset().top,
+  // document.querySelector("body").style = "overflow: visible";
+  $("body").hide();
+  // document.body.scrollTop = 0;
+  // document.documentElement.scrollTop = 0;
 });
 
 // //Mute Unmute Music Background
@@ -174,7 +184,7 @@ function showDiv() {
 //copy bank number
 function copyBank() {
   /* Copy text into clipboard */
-  navigator.clipboard.writeText("165125317811");
+  navigator.clipboard.writeText("160149068796");
 }
 
 //Javascript for slide show desktop
