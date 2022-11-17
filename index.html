@@ -38,6 +38,7 @@
 
 
     <section class="main" id="main-section">
+        <div class="main-overlay"></div>
         <div class="content">
             <div class="top-area">
                 <h1 class="intro">The Wedding of</h1>
@@ -149,13 +150,17 @@
     </section>
 
     <section class="quote-section">
-        <div class="logo">
-            <img src="images/LOGO.PNG" alt="">
-        </div>
         <h1 class="quote">
-            There are THREE things that last, faith, hope and love but the GREATEST of these is LOVE.
+            There are THREE things that last, faith, hope and love.
+        </h1>
+        <h1 class="quote">
+            But the GREATEST of these is LOVE.
         </h1>
         <p class="gospel">1 CORINTHIANS 13:13</p>
+
+        <div class="logo">
+            <img src="images/1234567.PNG" alt="">
+        </div>
     </section>
 
     <section class="wedding-card" id="wedCard-section">
@@ -325,22 +330,32 @@
                 <label class="formText">Name: </label>
                 <input class="inputCombine" id="name" type="text" name="username" placeholder="eg: Carlwinsona"
                     required>
+
                 <br><br>
+
                 <label class="formText">Contact No: </label>
                 <input class="inputCombine" type="tel" id="phoneNo" name="phone" placeholder="eg: 012-3456789" required>
+
                 <br><br>
+
                 <label class="formText"> Will you attend: </label>
+
                 <br>
+
                 <input type="radio" name="attend" value="Yes" onclick="radioAttend()" required> <label class="radioText"
                     for="">Yes</label>
                 &emsp;
                 <input type="radio" name="attend" value="No" onclick="radioNotAttend()" required> <label
                     class="radioText" for="">No</label>
-                <br id="br1" style="display:none;"><br id="br2" style="display:none;">
+
+                <br id="br1" style="display:none;">
+                <br id="br2" style="display:none;">
 
                 <div id="totalGuest" style="display:none;">
-                    <label class="formText">Additional guest?/Total attendance: </label>
+                    <label class="formText">Additional guest?: </label>
+
                     <br>
+
                     <input type="radio" name="totalAttend" value="1" onclick="radio1()" required> <label
                         class="radioText" for="">1</label> &emsp;
                     <input type="radio" name="totalAttend" value="2" onclick="radio2()" required> <label
@@ -365,14 +380,14 @@
                 </div>
 
                 <br><br>
-                <label class="formText"> Wishes: </label>
+
+                <label class="formText">Wishes: </label>
                 <textarea name="wish" id="wish" cols="50" rows="4" placeholder="Happy Wedding Day" required></textarea>
+
                 <br><br>
 
-                <input class="inputCombine" type="submit" value="Send" name="submit" onclick="defaultValue()">
+                <input class="inputSend" type="submit" value="Send" name="submit" onclick="defaultValue()">
             </form>
-
-
         </div>
 
         <div class="content">
@@ -381,17 +396,16 @@
     </section>
 
     <section class="gift">
-        <h1>Wedding Gift</h1>
-        <p>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following
-            buttons to send them to us:</p>
-        <button onclick="showDiv()">Wedding Gift</button>
-        <!-- style="display:none;" -->
-        <div class="cardContainer" id="welcomeDiv" style="display:none;">
-            <div class="card">
-                <p class="bankName">Maybank</p>
-                <p class="bankNo" id="bankNum">160149068796</p>
-
-                <p class="name">Winna Primus Kayau</p>
+        <div class="content">
+            <h1>Wedding Gift</h1>
+            <p>For family and friends who would like to send a gift. We would be glad to receive it. Tap the following
+                buttons to send them to us:</p>
+            <button onclick="showCard()">Wedding Gift</button>
+            <!-- style="display:none;" -->
+            <div class="cardContainer" id="card-container" style="display:none;">
+                <h2 class="bankName">Maybank</h2>
+                <h2 class="bankNo" id="bankNum">160149068796</h2>
+                <h2 class="name">Winna Primus Kayau</h2>
                 <div class="copyButton" onclick="copyBank()">Copy Number</div>
             </div>
         </div>
@@ -477,27 +491,27 @@
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen></iframe>
 
-        <p class="hashtag">#carlwinsona'shappilyeverafter</p>
-
+        <p class="hashtag">#carlwinsona’sforeverafter</p>
     </section>
 
     <section class="lastImg-section">
+        <div class="top-overlay"></div>
         <div class="overlay">
             <p class="intro">See You on Our Big Day</p>
-            <h1 class="names">Winna & Carlson</h1>
+            <h1 class="intro">Love,</h1>
+            <h1 class="names">Carlwinsona</h1>
         </div>
-
     </section>
 
     <section class="footer">
         <div class="logo">
-            <img src="images/LOGO.PNG" alt="">
+            <img src="images/1234567.PNG" alt="">
         </div>
     </section>
 
 </body>
+
 <script src="https://unpkg.com/scrollreveal"></script>
 <script src="main.js"></script>
-
 
 </html>

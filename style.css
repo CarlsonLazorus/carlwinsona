@@ -47,7 +47,7 @@
 /* color: #d6ad60; */
 /* color: #b68d40; */
 /* color: #eca241; */
-/* color: #d49d40; */
+/* color: #d49d40; d6982b*/
 
 * {
   margin: 0;
@@ -59,11 +59,6 @@ html {
   max-width: 100%;
   height: 100%;
   scroll-behavior: smooth;
-
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
 }
 
 body {
@@ -88,7 +83,7 @@ section {
   width: 45px;
   height: 45px;
   background: #2a2a2a;
-  color: #d6ad60;
+  color: #d49d40;
   font-size: 16px;
   font-weight: 700;
   border-radius: 3px;
@@ -108,7 +103,7 @@ section {
 
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d49d40;
 
   display: flex;
   justify-content: center;
@@ -122,11 +117,11 @@ section {
   position: fixed;
   z-index: 999;
   left: 15px;
-  bottom: 10px;
+  bottom: 20px;
   border-radius: 50%;
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d49d40;
   background: #2a2a2a;
 
   display: flex;
@@ -137,11 +132,22 @@ section {
 .sound i {
   font-size: 1.5em;
   transition: 0.3s ease;
-  color: #d6ad60;
+  color: #d49d40;
 }
 
 .sound i:hover {
   transform: scale(1.3);
+}
+
+/*=======Scroll bar=======*/
+::-webkit-scrollbar {
+  width: 10px;
+  background: #1b1b1b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d49d40;
+  border-radius: 2em;
 }
 
 /*=======home video div=======*/
@@ -177,7 +183,7 @@ section {
   height: 100vh;
   position: fixed;
   display: flex;
-  backdrop-filter: blur(0);
+  /* backdrop-filter: blur(2); */
   background: rgba(0, 0, 0, 0.5);
 }
 
@@ -185,31 +191,31 @@ section {
 .main {
   width: 100%;
   height: 100vh;
-
   background: url(images/2.JPG) no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   /* background-attachment: fixed; */
 
-  /* background: rgba(255, 255, 255, 0.1); */
-  /* background: #000; */
-  /* box-shadow: 0 0 30px rgb(0 0 0 / 100%); */
+  box-shadow: 0 0 30px 20px rgb(127 127 127 / 100%);
+}
+
+.main .main-overlay {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(1px);
 }
 
 .main .content {
+  z-index: 1;
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* background: rgba(0, 0, 0, 0.5); */
-
-  /* background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  ); */
 }
 
 /* .main .content .top-area {
@@ -221,7 +227,8 @@ section {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main .content .top-area .name {
@@ -231,6 +238,8 @@ section {
   text-align: center;
   margin: 10px 0 10px 0;
   color: #eca241;
+  /* color: #d6982b; */
+  text-shadow: 2px 2px 5px #000;
 }
 
 .main .content .top-area .save {
@@ -238,7 +247,8 @@ section {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
 }
 
 /* .main .content .bottom-area {
@@ -250,8 +260,9 @@ section {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
   margin-bottom: 10px;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main .content .bottom-area .location {
@@ -259,7 +270,8 @@ section {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main .content .bottom-area .day {
@@ -267,7 +279,8 @@ section {
   font-size: 18px;
   font-weight: 500;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main .content .bottom-area .countdownContainer {
@@ -284,7 +297,8 @@ section {
   font-size: 30px;
   font-weight: 400;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main
@@ -297,8 +311,9 @@ section {
   font-size: 14px;
   font-weight: 400;
   text-align: center;
-  color: #d6ad60;
+  color: #d49d40;
   margin-top: -10px;
+  text-shadow: 1px 1px 3px #000;
 }
 
 .main .content .bottom-area a {
@@ -310,11 +325,16 @@ section {
   position: relative;
   margin: 20px auto;
   text-align: center;
-  background-color: #b68d40;
+  background-color: #eca241;
   color: #ffffff;
   text-decoration: none;
   padding: 5px;
   border-radius: 5px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d49d40;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+  text-shadow: 1px 1px 3px #000;
 }
 
 /* .main .slide-show1 {
@@ -351,11 +371,7 @@ section {
   width: 100%;
   height: auto;
   flex-direction: column;
-  padding: 50px 0;
-
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
+  padding: 100px 0;
 
   display: flex;
   justify-content: center;
@@ -399,27 +415,9 @@ section {
   flex-direction: column;
   padding: 50px 100px;
 
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  /* background: #000; */
-
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.quote-section .logo {
-  width: 100px;
-  height: 100px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.quote-section .logo img {
-  width: 100%;
 }
 
 .quote-section .quote {
@@ -427,8 +425,7 @@ section {
   font-size: 22px;
   font-weight: 400;
   text-align: center;
-  margin-top: 50px;
-  color: #d6ad60;
+  color: #d6982b;
 }
 
 .quote-section .gospel {
@@ -437,7 +434,20 @@ section {
   font-weight: 400;
   text-align: center;
   margin-top: 20px;
-  color: #d6ad60;
+  color: #d6982b;
+}
+
+.quote-section .logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.quote-section .logo img {
+  width: 100%;
 }
 
 /* ------- wedding card styles ------- */
@@ -445,20 +455,7 @@ section {
   width: 100%;
   height: auto;
   flex-direction: column;
-  padding: 50px 0 0 0;
-
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  /* Add the blur effect */
-  /* filter: blur(8px);
-  -webkit-filter: blur(8px); */
-
-  /* background: #000; 
-   background-size: cover;
-  background-position: center;
-  */
+  padding: 50px 0 100px 0;
 }
 
 /* .wedding-card .content {
@@ -482,8 +479,8 @@ section {
   font-size: 25px;
   font-weight: 500;
   text-align: center;
-  margin-bottom: 20px;
-  color: #d6ad60;
+  margin-bottom: 70px;
+  color: #d6982b;
 }
 
 .wedding-card .top {
@@ -491,9 +488,6 @@ section {
   display: flex;
   width: 100%;
   flex-direction: row;
-  /* justify-content: center; */
-  /* padding: 30px 0 30px 0; */
-  /* background: red; */
 }
 
 .wedding-card .top .left {
@@ -510,7 +504,7 @@ section {
 
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d6982b;
   box-shadow: 0 0 30px rgb(214 173 96 / 30%);
 }
 
@@ -553,7 +547,7 @@ section {
 
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d6982b;
   box-shadow: 0 0 30px rgb(214 173 96 / 30%);
 }
 
@@ -590,7 +584,7 @@ section {
   font-size: 22px;
   font-weight: 600;
   text-align: center;
-  color: #d6ad60;
+  color: #d6982b;
 }
 
 .plus-text {
@@ -607,8 +601,8 @@ section {
   font-size: 25px;
   font-weight: 400;
   text-align: center;
-  margin-bottom: 20px;
-  color: #d6ad60;
+  margin-top: 50px;
+  color: #d6982b;
 }
 
 /* .wedding-card .name-column {
@@ -651,24 +645,8 @@ section {
   background: orange;
 } */
 
-/* .photo {
-  width: 50%;
-  height: auto;
-  border-radius: 30px;
-} */
-
 /* ------- mid image styles ------- */
 .midImage {
-  /* width: 100%; */
-  /* height: 500px; */
-  /* padding: 50px 20px 50px 20px; */
-  /* flex-direction: column; */
-
-  /* background: url(images/h3.JPG) no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed; */
-
   width: 100%;
 
   background: url(images/h6.JPG) no-repeat;
@@ -677,7 +655,7 @@ section {
 
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d6982b;
   box-shadow: 0 0 30px rgb(214 173 96 / 30%);
 }
 
@@ -702,7 +680,7 @@ section {
 
 /* ------- schedule styles ------- */
 .schedule {
-  padding: 50px 20px 50px 20px;
+  padding: 100px 20px 50px 20px;
   flex-direction: column;
 
   /* background: url(images/4.JPG) no-repeat;
@@ -741,7 +719,7 @@ section {
   font-size: 28px;
   text-align: center;
   margin-bottom: 30px;
-  color: #d6ad60;
+  color: #d6982b;
 }
 
 .schedule .content-area .mass {
@@ -789,7 +767,7 @@ section {
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
-  border-color: #d6ad60;
+  border-color: #d6982b;
   box-shadow: 0 0 30px rgb(214 173 96 / 30%);
   /* padding: 20px; */
 
@@ -829,14 +807,14 @@ section {
   font-family: "Cinzel";
   font-size: 20px;
   font-weight: 600;
-  color: #d6ad60;
+  color: #d6982b;
 }
 
 .schedule .content-area .content .top p {
   font-family: "Sahitya";
   font-size: 18px;
   font-weight: 500;
-  color: #d6ad60;
+  color: #d6982b;
   margin: 10px 0 10px 0;
 }
 
@@ -845,13 +823,7 @@ section {
   width: 100%;
   height: auto;
   flex-direction: row;
-  padding: 50px 0 20px 0;
-
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  /* background: #000; */
+  padding: 50px 0 100px 0;
 }
 
 .rsvp .content {
@@ -859,7 +831,6 @@ section {
   position: relative;
   display: flex;
   flex-direction: column;
-  /* flex-direction: row; */
   border-radius: 30px;
   border-style: solid;
   border-width: 2px;
@@ -867,8 +838,6 @@ section {
   box-shadow: 0 0 30px rgb(214 173 96 / 30%);
   padding: 30px;
   margin: 20px;
-
-  /* background: #fff; */
 }
 
 .rsvp .title {
@@ -926,9 +895,44 @@ section {
   border-color: #eca241 !important;
 }
 
+.rsvp .rsvpForm .radioText {
+  font-family: "Quicksand";
+  font-size: 20px;
+  color: #d6ad60;
+}
+
+input[type="radio"] {
+  accent-color: #ffa500;
+  /* width: 10px;
+  height: 10px; */
+  /*
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: #d1d3d1;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white; */
+}
+
+/* input[type="radio"]:checked:after {
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  top: -1px;
+  left: -1px;
+  position: relative;
+  background-color: #ffa500;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+} */
+
 .rsvp .rsvpForm textarea {
   width: 100%;
-  /* height: 100px; */
   font-family: "Quicksand";
   font-size: 16px;
   border-radius: 10px;
@@ -949,55 +953,56 @@ section {
   border-color: #eca241 !important;
 }
 
-.rsvp .rsvpForm .radioText {
+.rsvp .rsvpForm .inputSend {
+  width: 100%;
   font-family: "Quicksand";
-  font-size: 20px;
-  color: #d6ad60;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  padding: 5px;
+  border-style: solid;
+  border-color: #eca241;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  color: #fff;
+  text-shadow: 1px 1px 3px #000;
+  background: #d6982b;
+
+  margin: 5px 0 0 0;
 }
 
-input[type="radio"]:after {
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  top: -1px;
-  left: -1px;
-  position: relative;
-  background-color: #d1d3d1;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
-}
-
-input[type="radio"]:checked:after {
-  width: 10px;
-  height: 10px;
-  border-radius: 10px;
-  top: -1px;
-  left: -1px;
-  position: relative;
-  background-color: #ffa500;
-  content: "";
-  display: inline-block;
-  visibility: visible;
-  border: 2px solid white;
+.rsvp .rsvpForm .inputSend:focus {
+  border-style: ridge;
+  border-color: #eca241 !important;
 }
 
 /* ------- gift section styles ------- */
 .gift {
   width: 100%;
-  /* height: 100vh; */
   flex-direction: column;
-  padding: 50px 0 20px 0;
+  padding: 50px 0 30px 0;
 
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  /* background: #000; */
+  /* border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%); */
 }
 
-.gift h1 {
+.gift .content {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
+}
+
+.gift .content h1 {
   font-family: "Pinyon Script";
   font-size: 60px;
   font-weight: 400;
@@ -1006,7 +1011,7 @@ input[type="radio"]:checked:after {
   color: #eca241;
 }
 
-.gift p {
+.gift .content p {
   font-family: "Quicksand";
   font-size: 24px;
   text-align: center;
@@ -1014,7 +1019,7 @@ input[type="radio"]:checked:after {
   color: #d6ad60;
 }
 
-.gift button {
+.gift .content button {
   font-family: "Quicksand";
   font-size: 20px;
   text-align: center;
@@ -1022,7 +1027,7 @@ input[type="radio"]:checked:after {
   color: #d6ad60;
   cursor: pointer;
 
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 10px;
   border-style: solid;
   border-color: #eca241;
@@ -1031,38 +1036,41 @@ input[type="radio"]:checked:after {
 
 .cardContainer {
   width: 500px;
-  height: 300px;
   border-radius: 20px;
   padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+
   border-style: solid;
   border-color: #eca241;
-  /* background: #000; */
 }
 
 .cardContainer .bankName {
   font-family: "Quicksand";
   font-size: 32px;
+  font-weight: 500;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #d6ad60;
 }
 
 .cardContainer .bankNo {
   font-family: "Quicksand";
   font-size: 28px;
+  font-weight: 500;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #d6ad60;
 }
 
 .cardContainer .name {
   font-family: "Quicksand";
   font-size: 24px;
+  font-weight: 500;
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: #d6ad60;
 }
 
@@ -1077,13 +1085,11 @@ input[type="radio"]:checked:after {
   padding: 10px;
   border-style: ridge;
   border-color: #eca241;
-  /* background: #000; */
 }
 
 /* ------- gallery section styles ------- */
 .gallery {
   width: 100%;
-  /* height: 100vh; */
   flex-direction: column;
   padding: 50px 100px 20px 100px;
 
@@ -1136,15 +1142,14 @@ input[type="radio"]:checked:after {
 /* ------- prewedding video styles ------- */
 .video-section {
   width: 100%;
-  /* height: 100vh; */
   flex-direction: column;
-  padding: 30px 50px 30px 50px;
+  padding: 100px 50px 50px 50px;
 
-  /* background: url(images/4.JPG) no-repeat;
-  background-size: cover;
-  background-position: center; */
-
-  /* background: #000; */
+  /* border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%); */
 }
 
 .video-section h1 {
@@ -1179,8 +1184,11 @@ input[type="radio"]:checked:after {
   width: 100%;
   height: 600px;
 
-  /* width: 100%;
-  height: 100%; */
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d6ad60;
+  box-shadow: 0 0 30px rgb(214 173 96 / 30%);
 }
 
 /* ------- last image section styles ------- */
@@ -1193,11 +1201,18 @@ input[type="radio"]:checked:after {
   background-size: cover;
   background-position: center;
 
-  /* background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.3) 0%,
-    rgba(0, 0, 0, 0.6) 100%
-  ); */
+  box-shadow: 0 0 30px 20px rgb(0 0 0 / 100%);
+}
+
+.lastImg-section .top-overlay {
+  width: 100%;
+  height: 100px;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .lastImg-section .overlay {
@@ -1226,8 +1241,8 @@ input[type="radio"]:checked:after {
 }
 
 .lastImg-section .overlay .names {
-  font-family: "Quicksand";
-  font-size: 28px;
+  font-family: "Melinda";
+  font-size: 32px;
   font-weight: 500;
   text-align: center;
   color: #d6ad60;
@@ -1253,14 +1268,10 @@ input[type="radio"]:checked:after {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background: #b68d40;
 }
 
 .footer .logo img {
   width: 100%;
-
-  background: #b68d40;
 }
 
 @media (max-width: 770px) {
@@ -1374,16 +1385,22 @@ input[type="radio"]:checked:after {
 
   /* ------- quote section styles ------- */
   .quote-section {
-    padding: 50px 20px;
+    padding: 20px 20px;
+  }
+
+  .quote-section .quote {
+    font-size: 14px;
+  }
+
+  .quote-section .gospel {
+    font-size: 12px;
+    margin-top: 10px;
   }
 
   .quote-section .logo {
     width: 100px;
     height: 100px;
-  }
-
-  .quote-section .quote {
-    font-size: 14px;
+    margin-top: 20px;
   }
 
   /* ------- wedding card styles ------- */
@@ -1428,6 +1445,7 @@ input[type="radio"]:checked:after {
   .wedding-card .bottom .left {
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
   }
 
   .wedding-card .bottom .right {
@@ -1465,6 +1483,7 @@ input[type="radio"]:checked:after {
 
   .wedding-card .bottom-text {
     font-size: 16px;
+    margin-top: 10px;
     margin-bottom: 20px;
     padding: 0 20px 0 20px;
   }
@@ -1489,16 +1508,6 @@ input[type="radio"]:checked:after {
 
   /* ------- mid image styles ------- */
   .midImage {
-    /* width: 100%; */
-    /* height: 500px; */
-    /* padding: 50px 20px 50px 20px; */
-    /* flex-direction: column; */
-
-    /* background: url(images/h3.JPG) no-repeat;
-        background-size: cover;
-        background-position: center;
-        background-attachment: fixed; */
-
     width: 100%;
 
     /* background: url(images/2.JPG) no-repeat;
@@ -1510,7 +1519,6 @@ input[type="radio"]:checked:after {
     width: 100%;
     /* height: 500px; */
   }
-
   .midImage .overlay {
     width: 100%;
     height: 200px;
@@ -1521,6 +1529,11 @@ input[type="radio"]:checked:after {
   }
 
   /* ------- schedule syles ------- */
+
+  .schedule {
+    padding: 50px 20px 10px 20px;
+    flex-direction: column;
+  }
 
   .schedule .title-area h1 {
     font-size: 32px;
@@ -1552,7 +1565,7 @@ input[type="radio"]:checked:after {
   /* ------- rsvp styles ------- */
   .rsvp {
     flex-direction: column;
-    padding: 30px 0 20px 0;
+    padding: 10px 0 20px 0;
   }
 
   .rsvp .content {
@@ -1564,24 +1577,36 @@ input[type="radio"]:checked:after {
   }
 
   .rsvp .text1 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .rsvp .text2 {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .rsvp .rsvpForm .formText {
-    font-size: 12px;
+    font-size: 14px;
+    border-radius: 6px;
   }
 
   .rsvp .rsvpForm .inputCombine {
-    font-size: 12px;
+    font-size: 14px;
     padding: 3px;
+    border-radius: 6px;
   }
 
   .rsvp .rsvpForm .radioText {
-    font-size: 12px;
+    font-size: 14px;
+  }
+
+  .rsvp .rsvpForm textarea {
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  .rsvp .rsvpForm .inputSend {
+    font-size: 14px;
+    border-radius: 6px;
   }
 
   /* ------- gift section styles ------- */
@@ -1589,15 +1614,15 @@ input[type="radio"]:checked:after {
     flex-direction: column;
     padding: 50px 10px 20px 10px;
   }
-  .gift h1 {
+  .gift .content h1 {
     font-size: 40px;
   }
 
-  .gift p {
+  .gift .content p {
     font-size: 15px;
   }
 
-  .gift button {
+  .gift .content button {
     font-size: 14px;
     text-align: center;
     margin-bottom: 30px;
@@ -1607,7 +1632,6 @@ input[type="radio"]:checked:after {
 
   .cardContainer {
     width: 100%;
-    height: 170px;
     padding: 10px;
   }
 
@@ -1649,5 +1673,64 @@ input[type="radio"]:checked:after {
   .video-section iframe {
     width: 100%;
     height: 200px;
+  }
+
+  /* ------- last image section styles ------- */
+  .lastImg-section {
+    width: 100%;
+    height: 70vh;
+    flex-direction: column;
+  }
+
+  .lastImg-section .overlay {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 0;
+
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0) 0%,
+      rgba(0, 0, 0, 1) 100%
+    );
+  }
+
+  .lastImg-section .overlay .intro {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  .lastImg-section .overlay .names {
+    font-family: "Melinda";
+    font-size: 20px;
+  }
+
+  /* ------- footer section styles ------- */
+  .footer {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 10px 0;
+
+    background: #000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footer .logo img {
+    width: 100%;
   }
 }

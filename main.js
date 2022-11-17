@@ -9,6 +9,10 @@ document.querySelector("#close").addEventListener("click", function () {
   playAudio();
 });
 
+// window.onbeforeunload = function () {
+//   window.scrollTo(0, 0);
+// };
+
 $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
   // $(window).scrollTop: $(".circle-section").offset().top,
@@ -18,20 +22,20 @@ $(window).on("beforeunload", function () {
   // document.documentElement.scrollTop = 0;
 });
 
-// //Mute Unmute Music Background
-// var audio = document.getElementById("music");
+//Mute Unmute Music Background
+var audio = document.getElementById("music");
 
-// function playAudio() {
-//   audio.play();
-//   document.getElementById("playButton").style.display = "inline";
-//   document.getElementById("pauseButton").style.display = "none";
-// }
+function playAudio() {
+  audio.play();
+  document.getElementById("playButton").style.display = "inline";
+  document.getElementById("pauseButton").style.display = "none";
+}
 
-// function pauseAudio() {
-//   audio.pause();
-//   document.getElementById("playButton").style.display = "none";
-//   document.getElementById("pauseButton").style.display = "inline";
-// }
+function pauseAudio() {
+  audio.pause();
+  document.getElementById("playButton").style.display = "none";
+  document.getElementById("pauseButton").style.display = "inline";
+}
 
 //Scroll to top button
 const scrollTopBtn = document.querySelector(".scrollToTop-btn");
@@ -177,8 +181,8 @@ var x = setInterval(function () {
 }, 1000);
 
 //show bank number
-function showDiv() {
-  document.getElementById("welcomeDiv").style.display = "block";
+function showCard() {
+  document.getElementById("card-container").style.display = "block";
 }
 
 //copy bank number
