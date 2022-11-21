@@ -202,7 +202,7 @@ section {
 .main .main-overlay {
   position: absolute;
   height: 100%;
-  width: 100%;
+  width: 100vh;
   display: flex;
   background: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(1px);
