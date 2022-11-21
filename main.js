@@ -9,12 +9,18 @@ document.querySelector("#close").addEventListener("click", function () {
   playAudio();
 });
 
+$("#close").on("click", function (e) {
+  e.preventDefault();
+});
+
 // window.onbeforeunload = function () {
 //   window.scrollTo(0, 0);
 // };
 
 $(window).on("beforeunload", function () {
   $(window).scrollTop(0);
+
+  history.replaceState({}, document.title, window.location.href.split("#")[0]);
   // $(window).scrollTop: $(".circle-section").offset().top,
   // document.querySelector("body").style = "overflow: visible";
   $("body").hide();
